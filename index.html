@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://www.facebook.com; connect-src https://www.facebook.com https://connect.facebook.net; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>A Bíblia Explicada · Guia católico dos 73 livros</title>
+<meta name="description" content="Os 73 livros da Bíblia católica, um por página: do que tratam, onde Jesus aparece e por onde começar a ler.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --fundo:#fbf7ef; --papel:#f3ead9; --tinta:#2a2420; --suave:#6f6255; --vinho:#8a1c2b; --ouro:#b8925a; --escuro:#2b1d18; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html { -webkit-text-size-adjust:100%; }
+body { background:var(--fundo); color:var(--tinta); font-family:'EB Garamond',Georgia,serif; font-size:20px; line-height:1.5; }
+.w { max-width:640px; margin:0 auto; padding:0 20px; }
+.rot { font-family:Inter,sans-serif; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--vinho); font-weight:500; }
+h1,h2 { font-weight:500; line-height:1.12; color:#1d1712; }
+h1 { font-size:40px; margin:14px 0 14px; }
+h2 { font-size:31px; margin:10px 0 16px; }
+p + p { margin-top:14px; }
+section { padding:52px 0; }
+.topo { background:var(--escuro); color:#f3e9d8; padding:46px 0 40px; }
+.topo h1 { color:#f6eddc; }
+.topo .rot { color:#d6b47a; }
+.topo p { color:#dccbb0; }
+.btn { display:block; text-align:center; background:var(--vinho); color:#fff; font-family:Inter,sans-serif; font-weight:600; font-size:17px; padding:17px 18px; border-radius:6px; text-decoration:none; margin-top:24px; }
+.btn small { display:block; font-weight:400; font-size:13px; opacity:.85; margin-top:3px; }
+.btn.claro { background:#fff; color:var(--vinho); border:1.5px solid var(--vinho); }
+.paginas { display:flex; gap:10px; margin-top:28px; }
+.paginas img { width:33.33%; border-radius:3px; box-shadow:0 6px 18px rgba(0,0,0,.35); }
+.paginas img:nth-child(2) { transform:translateY(-10px); }
+.claro-bg { background:var(--papel); }
+ul.lista { list-style:none; margin-top:16px; }
+ul.lista li { padding:10px 0 10px 28px; border-bottom:1px solid #e3d6c1; position:relative; }
+ul.lista li:before { content:''; position:absolute; left:4px; top:21px; width:12px; height:2px; background:var(--ouro); }
+.anat { display:grid; grid-template-columns:1fr; gap:18px; margin-top:22px; }
+.anat img { width:100%; max-width:360px; margin:0 auto; display:block; border-radius:3px; box-shadow:0 4px 16px rgba(60,40,20,.18); }
+.anat ol { padding-left:22px; }
+.anat li { margin-bottom:9px; }
+.anat b { font-family:Inter; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--vinho); font-weight:600; }
+.cita { font-style:italic; font-size:23px; border-left:2px solid var(--ouro); padding-left:16px; color:#3a2e25; margin:22px 0; }
+.oferta { background:#fff; border:1px solid #e1d3bb; border-radius:8px; padding:24px 22px; margin-top:18px; }
+.oferta.destaque { border:2px solid var(--vinho); position:relative; }
+.selo { position:absolute; top:-13px; left:20px; background:var(--vinho); color:#fff; font-family:Inter; font-size:12px; font-weight:600; letter-spacing:.06em; padding:4px 10px; border-radius:20px; }
+.oferta h3 { font-weight:500; font-size:25px; }
+.preco { font-family:Inter; font-size:34px; font-weight:600; color:#1d1712; margin-top:8px; }
+.preco span { font-size:15px; font-weight:400; color:var(--suave); }
+.oferta ul { list-style:none; margin-top:12px; font-size:18px; }
+.oferta li { padding:5px 0 5px 24px; position:relative; }
+.oferta li:before { content:'✓'; position:absolute; left:0; color:var(--vinho); font-family:Inter; font-weight:600; }
+.oferta li.nao { color:#a99d8e; }
+.oferta li.nao:before { content:'–'; color:#c4b8a8; }
+.garantia { display:flex; gap:16px; align-items:flex-start; }
+.garantia .n { flex:none; width:64px; height:64px; border-radius:50%; border:2px solid var(--ouro); display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:Inter; font-weight:600; color:var(--vinho); font-size:22px; line-height:1; }
+.garantia .n small { font-size:10px; font-weight:500; letter-spacing:.05em; }
+details { border-bottom:1px solid #e3d6c1; padding:14px 0; }
+summary { cursor:pointer; font-weight:500; list-style:none; }
+summary::-webkit-details-marker { display:none; }
+summary:after { content:'+'; float:right; font-family:Inter; color:var(--vinho); }
+details[open] summary:after { content:'–'; }
+details p { margin-top:8px; color:#4a3d31; font-size:18px; }
+.lista-dep { display:grid; gap:16px; margin-top:18px; }
+.dep { background:#fff; border:1px solid #e1d3bb; border-radius:8px; padding:16px; }
+.dep img { width:100%; border-radius:6px; }
+.dep blockquote { font-style:italic; margin:8px 0; }
+.dep figcaption { font-family:Inter; font-size:13px; color:var(--suave); }
+footer { padding:34px 0 90px; font-family:Inter; font-size:12px; color:#9a8d7d; text-align:center; line-height:1.6; }
+.fixo { position:fixed; left:0; right:0; bottom:0; background:rgba(251,247,239,.96); border-top:1px solid #e3d6c1; padding:10px 16px; display:none; }
+.fixo a { margin:0 auto; max-width:600px; padding:13px; font-size:16px; }
+@media (min-width:700px) { h1 { font-size:50px; } .anat { grid-template-columns:1fr 1fr; align-items:center; } }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="w">
+    <div class="rot">Guia católico · 73 livros</div>
+    <h1>A Bíblia explicada, livro por livro</h1>
+    <p>Para quem já tentou ler a Bíblia e travou. Cada um dos 73 livros em uma página: do que trata, onde Jesus aparece e por onde começar a ler.</p>
+    <div class="paginas">
+      <img src="img/capa.jpg" alt="Capa do guia A Bíblia Explicada">
+      <img src="img/exodo.jpg" alt="Página do livro do Êxodo no guia">
+      <img src="img/livro53.jpg" alt="Página do Evangelho de Mateus no guia">
+    </div>
+    <a class="btn compra" href="#ofertas">Quero o guia<small>PDF para celular · acesso na hora</small></a>
+  </div>
+</header>
+
+<section>
+  <div class="w">
+    <div class="rot">Se isso já aconteceu com você</div>
+    <h2>Começar pelo Gênesis e desistir no Levítico</h2>
+    <p>É a história mais comum entre católicos que decidem ler a Bíblia. O começo é bonito, depois vêm leis de sacrifício, listas de nomes, profetas falando de reinos que a gente nunca ouviu falar. A pessoa fecha o livro achando que o problema é ela.</p>
+    <p>O problema é que a Bíblia não é um livro só. É uma biblioteca de 73 livros, escritos ao longo de mais de mil anos, com estilos diferentes: história, poesia, lei, profecia, cartas. Sem saber o que é cada um, fica difícil entender qualquer um.</p>
+    <p>Este guia é o mapa dessa biblioteca.</p>
+  </div>
+</section>
+
+<section class="claro-bg">
+  <div class="w">
+    <div class="rot">O que tem em cada página</div>
+    <h2>Dois minutos antes de ler muda a leitura</h2>
+    <div class="anat">
+      <img src="img/exodo.jpg" alt="Exemplo de página: Êxodo">
+      <ol>
+        <li><b>Em uma frase</b><br>A mensagem do livro, para você nunca mais esquecer.</li>
+        <li><b>Quem escreveu e quando</b><br>O contexto, segundo a tradição e o estudo da Igreja.</li>
+        <li><b>Do que trata</b><br>O resumo da história, sem enrolação.</li>
+        <li><b>Onde Jesus aparece</b><br>Como aquele livro aponta para Cristo, inclusive no Antigo Testamento.</li>
+        <li><b>Por onde começar</b><br>Os trechos certos para ler primeiro.</li>
+        <li><b>Para rezar</b><br>Uma sugestão simples para levar a leitura para a oração.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w">
+    <div class="rot">Por que um guia católico</div>
+    <h2>A sua Bíblia tem 73 livros, não 66</h2>
+    <p>Boa parte dos materiais sobre a Bíblia que circulam na internet foi feita para Bíblias protestantes, com 66 livros. Ficam de fora Tobias, Judite, Macabeus, Sabedoria, Eclesiástico e Baruc, além de partes de Ester e Daniel, livros que a Igreja lê na Missa.</p>
+    <p>Aqui estão os 73, na ordem da Bíblia católica, com as referências que você encontra na sua tradução (CNBB, Ave-Maria, Jerusalém ou Pastoral), e com a leitura que a Igreja faz deles: o Protoevangelho em Gênesis 3,15, Maria em Apocalipse 12, a base bíblica da oração pelos falecidos em 2 Macabeus.</p>
+    <div class="cita">"Ignorar as Escrituras é ignorar Cristo." — São Jerônimo</div>
+  </div>
+</section>
+
+<section class="claro-bg">
+  <div class="w">
+    <div class="rot">Opcional no checkout</div>
+    <h2>A Bíblia em um ano</h2>
+    <p>Um plano de 365 dias com três leituras curtas por dia: Antigo Testamento, Novo Testamento e Salmos. São 15 a 20 minutos. Cada dia tem um quadradinho para marcar, e o plano cobre todos os capítulos dos 73 livros.</p>
+    <p>Junto vem o passo a passo da Lectio Divina, o jeito de rezar com a Bíblia que a Igreja ensina desde os primeiros monges.</p>
+    <div class="paginas" style="margin-top:24px">
+      <img src="img/bonuscapa.jpg" alt="Capa do bônus A Bíblia em um ano">
+      <img src="img/plano.jpg" alt="Página do plano de leitura">
+      <img src="img/mapa.jpg" alt="Mapa da Bíblia">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w">
+    <div class="rot">Para quem é</div>
+    <h2>Feito para quem</h2>
+    <ul class="lista">
+      <li>quer ler a Bíblia e não sabe por onde começar</li>
+      <li>já começou várias vezes e parou no meio</li>
+      <li>escuta as leituras da Missa e gostaria de entender o contexto</li>
+      <li>é catequista, ministro ou participa de grupo de oração e quer uma referência rápida</li>
+      <li>quer ensinar a fé aos filhos e netos com mais segurança</li>
+    </ul>
+  </div>
+</section>
+
+<section class="claro-bg" id="depoimentos" hidden>
+  <div class="w">
+    <div class="rot">Quem já usa</div>
+    <h2>O que dizem os leitores</h2>
+    <div class="lista-dep"></div>
+  </div>
+</section>
+
+<section class="claro-bg" id="ofertas">
+  <div class="w">
+    <div class="rot">Acesso imediato</div>
+    <h2>Comece hoje a entender a sua Bíblia</h2>
+
+    <div class="oferta destaque">
+      <h3>A Bíblia Explicada</h3>
+      <div class="preco">R$ 19,90 <span>pagamento único</span></div>
+      <ul>
+        <li>Guia em PDF com 80 páginas</li>
+        <li>Os 73 livros, um por página</li>
+        <li>Mapa da Bíblia e linha do tempo da salvação</li>
+        <li>Acesso pela área de membros, no celular ou no computador</li>
+        <li>Pode baixar e imprimir</li>
+      </ul>
+      <a class="btn compra" href="#">Quero o guia por R$ 19,90</a>
+      <p style="font-size:16px;color:#6f6255;margin-top:14px">No checkout, você pode incluir o plano <b>A Bíblia em um Ano</b> com a Lectio Divina por mais R$ 9,90.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w">
+    <div class="garantia">
+      <div class="n">7<small>DIAS</small></div>
+      <div>
+        <h2 style="font-size:26px;margin-top:0">Garantia de 7 dias</h2>
+        <p>Se o guia não for o que você esperava, peça o reembolso em até 7 dias pela própria plataforma de pagamento. Você recebe o valor de volta, sem precisar explicar o motivo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="claro-bg">
+  <div class="w">
+    <div class="rot">Dúvidas</div>
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Como recebo o guia?</summary><p>Logo depois do pagamento, você recebe no e-mail o acesso à área de membros, onde lê o guia ou baixa o PDF. No Pix a liberação é na hora; no cartão, em poucos minutos.</p></details>
+    <details><summary>Consigo ler no celular?</summary><p>Sim. O guia foi diagramado em tamanho A5, que fica confortável na tela do celular. Também dá para imprimir.</p></details>
+    <details><summary>Serve para qualquer tradução da Bíblia?</summary><p>Serve para as Bíblias católicas em português: CNBB, Ave-Maria, Jerusalém, Pastoral e outras. Nos Salmos, quando a numeração muda, as duas aparecem.</p></details>
+    <details><summary>É um material oficial da Igreja?</summary><p>Não. É um guia de estudo feito por leigos, fiel à tradição católica e às notas das Bíblias católicas. Não substitui a catequese nem a orientação do seu pároco.</p></details>
+    <details><summary>Tem o texto da Bíblia dentro?</summary><p>Não. O guia explica os livros e indica os trechos; a leitura você faz na sua própria Bíblia. É assim que ele funciona melhor: o guia ao lado, a Bíblia aberta.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="w">A Bíblia Explicada · Guia católico dos 73 livros<br>Este site não é afiliado ao Facebook nem à Meta.<br>Pagamento processado pela Cakto.</div>
+</footer>
+
+<div class="fixo" id="fixo"><a class="btn" href="#ofertas">Quero o guia</a></div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
