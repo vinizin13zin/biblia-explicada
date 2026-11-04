@@ -1,6 +1,6 @@
 // Configuração: troque só estas linhas.
 const LINK_CHECKOUT = 'https://pay.cakto.com.br/3aam6mb_1279699';
-const PIXEL_ID = '';   // ex.: '123456789012345' (Gerenciador de Eventos da Meta)
+const PIXEL_ID = '1027091983678943';   // ex.: '123456789012345' (Gerenciador de Eventos da Meta)
 // Depoimentos REAIS de clientes: [nome curto, cidade, texto, 'img/depoimentos/arquivo.jpg' ou '']. Vazio = seção escondida.
 const DEPOIMENTOS = [];
 
